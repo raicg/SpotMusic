@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version: 2.4.4
 
-Things you may want to cover:
-
-* Ruby version
+* Rails version: 5.2.1
 
 * System dependencies
+    
+    devise: 4.5.0
+    pwa: 4.0.5
+    active_storage
+    webpack
+    bulma: 0.7.2
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
