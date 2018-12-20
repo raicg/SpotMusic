@@ -7,8 +7,14 @@
 * System dependencies
     
     devise: 4.5.0
+
     pwa: 4.0.5
+
     active_storage
+
     webpack
+
     bulma: 0.7.2
+
+    
 
