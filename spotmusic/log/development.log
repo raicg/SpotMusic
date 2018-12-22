@@ -1,0 +1,395 @@
+Started GET "/" for 127.0.0.1 at 2018-12-20 12:11:38 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 1605ms (Views: 1597.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-20 12:13:34 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4183ms (Views: 4176.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-20 12:13:41 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-20 12:13:42 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-20 12:13:42 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-20 12:13:43 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (107.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (97.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateActiveStorageTables (20181220151447)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "byte_size" bigint NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181220151447_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  ↳ db/migrate/20181220151447_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "created_at" datetime NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  ↳ db/migrate/20181220151447_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  ↳ db/migrate/20181220151447_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  ↳ db/migrate/20181220151447_create_active_storage_tables.active_storage.rb:16
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181220151447"]]
+  ↳ bin/rails:9
+  [1m[35m (99.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20181220151623)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "name" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181220151623_devise_create_users.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20181220151623_devise_create_users.rb:40
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20181220151623_devise_create_users.rb:41
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181220151623"]]
+  ↳ bin/rails:9
+  [1m[35m (91.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateArtists (20181220151816)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "artists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181220151816_create_artists.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181220151816"]]
+  ↳ bin/rails:9
+  [1m[35m (93.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateCategories (20181220151833)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181220151833_create_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181220151833"]]
+  ↳ bin/rails:9
+  [1m[35m (117.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateAlbums (20181220151855)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "albums" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "date" datetime, "category_id" integer, "artist_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_5b5ea4951b"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+, CONSTRAINT "fk_rails_124a79559a"
+FOREIGN KEY ("artist_id")
+  REFERENCES "artists" ("id")
+)[0m
+  ↳ db/migrate/20181220151855_create_albums.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_albums_on_category_id" ON "albums" ("category_id")[0m
+  ↳ db/migrate/20181220151855_create_albums.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_albums_on_artist_id" ON "albums" ("artist_id")[0m
+  ↳ db/migrate/20181220151855_create_albums.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181220151855"]]
+  ↳ bin/rails:9
+  [1m[35m (103.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateSongs (20181220151905)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "songs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "played_count" integer DEFAULT 0, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_f4e40cd655"
+FOREIGN KEY ("album_id")
+  REFERENCES "albums" ("id")
+)[0m
+  ↳ db/migrate/20181220151905_create_songs.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_songs_on_album_id" ON "songs" ("album_id")[0m
+  ↳ db/migrate/20181220151905_create_songs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181220151905"]]
+  ↳ bin/rails:9
+  [1m[35m (105.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateRecentlyHeards (20181220151914)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "recently_heards" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_6aa586bb00"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_48e4c69345"
+FOREIGN KEY ("album_id")
+  REFERENCES "albums" ("id")
+)[0m
+  ↳ db/migrate/20181220151914_create_recently_heards.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_recently_heards_on_user_id" ON "recently_heards" ("user_id")[0m
+  ↳ db/migrate/20181220151914_create_recently_heards.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_recently_heards_on_album_id" ON "recently_heards" ("album_id")[0m
+  ↳ db/migrate/20181220151914_create_recently_heards.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181220151914"]]
+  ↳ bin/rails:9
+  [1m[35m (105.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateFavorites (20181220151925)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "favoritable_type" varchar, "favoritable_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_d15744e438"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20181220151925_create_favorites.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_favorites_on_user_id" ON "favorites" ("user_id")[0m
+  ↳ db/migrate/20181220151925_create_favorites.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_favorites_on_favoritable_type_and_favoritable_id" ON "favorites" ("favoritable_type", "favoritable_id")[0m
+  ↳ db/migrate/20181220151925_create_favorites.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181220151925"]]
+  ↳ bin/rails:9
+  [1m[35m (99.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-12-20 15:20:25.055143"], ["updated_at", "2018-12-20 15:20:25.055143"]]
+  ↳ bin/rails:9
+  [1m[35m (66.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-12-20 12:26:46 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1079ms (Views: 1072.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-20 12:26:49 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-20 12:26:51 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-12-22 10:42:19 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 2685ms (Views: 2655.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCategory Create (11.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Rock"], ["created_at", "2018-12-22 14:28:46.746547"], ["updated_at", "2018-12-22 14:28:46.746547"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (65.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mActiveStorage::Attachment Load (12.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+[36m  Disk Storage (1.6ms) [0m[32mUploaded file to key: FUNNbFBoiicqVGQ4unt41JTQ (checksum: SiAEz1SPvjlxGnYinrk+Yg==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Blob Create (16.0ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "FUNNbFBoiicqVGQ4unt41JTQ"], ["filename", "rock.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 72917], ["checksum", "SiAEz1SPvjlxGnYinrk+Yg=="], ["created_at", "2018-12-22 14:28:47.049910"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (73.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Category"], ["record_id", 1], ["blob_id", 1], ["created_at", "2018-12-22 14:28:47.155766"]]
+  ↳ db/seeds.rb:9
+  [1m[36mCategory Update (0.1ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = ? WHERE "categories"."id" = ?[0m  [["updated_at", "2018-12-22 14:28:47.157815"], ["id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (67.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 47ddee01-9876-4988-b848-7612360dc0ca) to Async(default) with arguments: #<GlobalID:0x000055dc9abbfce8 @uri=#<URI::GID gid://spotmusic/ActiveStorage::Blob/1>>
+  ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [47ddee01-9876-4988-b848-7612360dc0ca] Performing ActiveStorage::AnalyzeJob (Job ID: 47ddee01-9876-4988-b848-7612360dc0ca) from Async(default) with arguments: #<GlobalID:0x000055dc9ab24630 @uri=#<URI::GID gid://spotmusic/ActiveStorage::Blob/1>>
+  ↳ db/seeds.rb:11
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Blues"], ["created_at", "2018-12-22 14:28:47.378055"], ["updated_at", "2018-12-22 14:28:47.378055"]]
+  ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::AnalyzeJob] [47ddee01-9876-4988-b848-7612360dc0ca] [36m  Disk Storage (81.1ms) [0m[34mDownloaded file from key: FUNNbFBoiicqVGQ4unt41JTQ[0m
+  [1m[35m (77.6ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [47ddee01-9876-4988-b848-7612360dc0ca] Skipping image analysis because the mini_magick gem isn't installed
+  ↳ db/seeds.rb:11
+[ActiveJob] [ActiveStorage::AnalyzeJob] [47ddee01-9876-4988-b848-7612360dc0ca]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [47ddee01-9876-4988-b848-7612360dc0ca]   ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  ↳ db/seeds.rb:12
+[ActiveJob] [ActiveStorage::AnalyzeJob] [47ddee01-9876-4988-b848-7612360dc0ca]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [47ddee01-9876-4988-b848-7612360dc0ca]   ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [47ddee01-9876-4988-b848-7612360dc0ca]   [1m[35m (78.3ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [47ddee01-9876-4988-b848-7612360dc0ca]   ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [47ddee01-9876-4988-b848-7612360dc0ca] Performed ActiveStorage::AnalyzeJob (Job ID: 47ddee01-9876-4988-b848-7612360dc0ca) from Async(default) in 244.14ms
+[36m  Disk Storage (2.4ms) [0m[32mUploaded file to key: V5sBbY3DLE7VkWZjAsZRZW84 (checksum: 2VbVoMX7RCoXKiCudc3IwA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "V5sBbY3DLE7VkWZjAsZRZW84"], ["filename", "blues.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 33330], ["checksum", "2VbVoMX7RCoXKiCudc3IwA=="], ["created_at", "2018-12-22 14:28:47.556946"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (75.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Category"], ["record_id", 2], ["blob_id", 2], ["created_at", "2018-12-22 14:28:47.635689"]]
+  ↳ db/seeds.rb:12
+  [1m[36mCategory Update (0.1ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = ? WHERE "categories"."id" = ?[0m  [["updated_at", "2018-12-22 14:28:47.637844"], ["id", 2]]
+  ↳ db/seeds.rb:12
+  [1m[35m (70.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: d4c5e2b9-d3be-49fd-89ea-2a3cceaf8f9c) to Async(default) with arguments: #<GlobalID:0x000055dc9b45d580 @uri=#<URI::GID gid://spotmusic/ActiveStorage::Blob/2>>
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Country"], ["created_at", "2018-12-22 14:28:47.716067"], ["updated_at", "2018-12-22 14:28:47.716067"]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d4c5e2b9-d3be-49fd-89ea-2a3cceaf8f9c] Performing ActiveStorage::AnalyzeJob (Job ID: d4c5e2b9-d3be-49fd-89ea-2a3cceaf8f9c) from Async(default) with arguments: #<GlobalID:0x000055dc9b159be0 @uri=#<URI::GID gid://spotmusic/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d4c5e2b9-d3be-49fd-89ea-2a3cceaf8f9c] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: V5sBbY3DLE7VkWZjAsZRZW84[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d4c5e2b9-d3be-49fd-89ea-2a3cceaf8f9c] Skipping image analysis because the mini_magick gem isn't installed
+  ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d4c5e2b9-d3be-49fd-89ea-2a3cceaf8f9c]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (70.0ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d4c5e2b9-d3be-49fd-89ea-2a3cceaf8f9c]   ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d4c5e2b9-d3be-49fd-89ea-2a3cceaf8f9c]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 2]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d4c5e2b9-d3be-49fd-89ea-2a3cceaf8f9c]   ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  ↳ db/seeds.rb:15
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d4c5e2b9-d3be-49fd-89ea-2a3cceaf8f9c]   [1m[35m (51.1ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d4c5e2b9-d3be-49fd-89ea-2a3cceaf8f9c]   ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [d4c5e2b9-d3be-49fd-89ea-2a3cceaf8f9c] Performed ActiveStorage::AnalyzeJob (Job ID: d4c5e2b9-d3be-49fd-89ea-2a3cceaf8f9c) from Async(default) in 133.68ms
+[36m  Disk Storage (2.5ms) [0m[32mUploaded file to key: dELSCQFcwYuHVGMsiYtEJuuL (checksum: Ac4Z6J3SIfEBh+JrTSBxGw==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "dELSCQFcwYuHVGMsiYtEJuuL"], ["filename", "country.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 79793], ["checksum", "Ac4Z6J3SIfEBh+JrTSBxGw=="], ["created_at", "2018-12-22 14:28:47.857393"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (72.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Category"], ["record_id", 3], ["blob_id", 3], ["created_at", "2018-12-22 14:28:47.936289"]]
+  ↳ db/seeds.rb:15
+  [1m[36mCategory Update (0.2ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = ? WHERE "categories"."id" = ?[0m  [["updated_at", "2018-12-22 14:28:47.939027"], ["id", 3]]
+  ↳ db/seeds.rb:15
+  [1m[35m (67.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 4d91f775-0e4e-4f5f-9b61-5a87f58e99f5) to Async(default) with arguments: #<GlobalID:0x000055dc9ac0adb0 @uri=#<URI::GID gid://spotmusic/ActiveStorage::Blob/3>>
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  ↳ db/seeds.rb:17
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4d91f775-0e4e-4f5f-9b61-5a87f58e99f5] Performing ActiveStorage::AnalyzeJob (Job ID: 4d91f775-0e4e-4f5f-9b61-5a87f58e99f5) from Async(default) with arguments: #<GlobalID:0x000055dc9abaca30 @uri=#<URI::GID gid://spotmusic/ActiveStorage::Blob/3>>
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Jazz"], ["created_at", "2018-12-22 14:28:48.014148"], ["updated_at", "2018-12-22 14:28:48.014148"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (49.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4d91f775-0e4e-4f5f-9b61-5a87f58e99f5] [36m  Disk Storage (55.0ms) [0m[34mDownloaded file from key: dELSCQFcwYuHVGMsiYtEJuuL[0m
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Category"], ["name", "image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4d91f775-0e4e-4f5f-9b61-5a87f58e99f5] Skipping image analysis because the mini_magick gem isn't installed
+  ↳ db/seeds.rb:18
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4d91f775-0e4e-4f5f-9b61-5a87f58e99f5]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4d91f775-0e4e-4f5f-9b61-5a87f58e99f5]   ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4d91f775-0e4e-4f5f-9b61-5a87f58e99f5]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4d91f775-0e4e-4f5f-9b61-5a87f58e99f5]   ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4d91f775-0e4e-4f5f-9b61-5a87f58e99f5]   [1m[35m (87.2ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4d91f775-0e4e-4f5f-9b61-5a87f58e99f5]   ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4d91f775-0e4e-4f5f-9b61-5a87f58e99f5] Performed ActiveStorage::AnalyzeJob (Job ID: 4d91f775-0e4e-4f5f-9b61-5a87f58e99f5) from Async(default) in 153.32ms
+[36m  Disk Storage (91.8ms) [0m[32mUploaded file to key: 8L9o6fBzv99zLLcX8xTnnvgH (checksum: GTqKSBExna8h5BvwaoXHvw==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "8L9o6fBzv99zLLcX8xTnnvgH"], ["filename", "jazz.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 66679], ["checksum", "GTqKSBExna8h5BvwaoXHvw=="], ["created_at", "2018-12-22 14:28:48.169810"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (52.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:18
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Category"], ["record_id", 4], ["blob_id", 4], ["created_at", "2018-12-22 14:28:48.227336"]]
+  ↳ db/seeds.rb:18
+  [1m[36mCategory Update (0.2ms)[0m  [1m[33mUPDATE "categories" SET "updated_at" = ? WHERE "categories"."id" = ?[0m  [["updated_at", "2018-12-22 14:28:48.229867"], ["id", 4]]
+  ↳ db/seeds.rb:18
+  [1m[35m (53.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:18
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 143c5bb1-5f9a-4df4-9804-1d2f3bedc45e) to Async(default) with arguments: #<GlobalID:0x000055dc9a9faef8 @uri=#<URI::GID gid://spotmusic/ActiveStorage::Blob/4>>
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [143c5bb1-5f9a-4df4-9804-1d2f3bedc45e] Performing ActiveStorage::AnalyzeJob (Job ID: 143c5bb1-5f9a-4df4-9804-1d2f3bedc45e) from Async(default) with arguments: #<GlobalID:0x000055dc9aa3e748 @uri=#<URI::GID gid://spotmusic/ActiveStorage::Blob/4>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [143c5bb1-5f9a-4df4-9804-1d2f3bedc45e] [36m  Disk Storage (0.5ms) [0m[34mDownloaded file from key: 8L9o6fBzv99zLLcX8xTnnvgH[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [143c5bb1-5f9a-4df4-9804-1d2f3bedc45e] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [143c5bb1-5f9a-4df4-9804-1d2f3bedc45e]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [143c5bb1-5f9a-4df4-9804-1d2f3bedc45e]   ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [143c5bb1-5f9a-4df4-9804-1d2f3bedc45e]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 4]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [143c5bb1-5f9a-4df4-9804-1d2f3bedc45e]   ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [143c5bb1-5f9a-4df4-9804-1d2f3bedc45e]   [1m[35m (62.2ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [143c5bb1-5f9a-4df4-9804-1d2f3bedc45e]   ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [143c5bb1-5f9a-4df4-9804-1d2f3bedc45e] Performed ActiveStorage::AnalyzeJob (Job ID: 143c5bb1-5f9a-4df4-9804-1d2f3bedc45e) from Async(default) in 73.46ms
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Andrew Howes"], ["created_at", "2018-12-22 14:28:48.392307"], ["updated_at", "2018-12-22 14:28:48.392307"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (44.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Artist"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+[36m  Disk Storage (3.5ms) [0m[32mUploaded file to key: k6L9i2ei8Bdf7bTUbeMhpSmd (checksum: F4Qr7IAkK19loJgbdsMRgQ==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "k6L9i2ei8Bdf7bTUbeMhpSmd"], ["filename", "andrew_howes.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 380149], ["checksum", "F4Qr7IAkK19loJgbdsMRgQ=="], ["created_at", "2018-12-22 14:28:48.453053"]]
+  ↳ db/seeds.rb:24
+  [1m[35m (54.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:24
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "photo"], ["record_type", "Artist"], ["record_id", 1], ["blob_id", 5], ["created_at", "2018-12-22 14:28:48.514073"]]
+  ↳ db/seeds.rb:24
+  [1m[36mArtist Update (0.2ms)[0m  [1m[33mUPDATE "artists" SET "updated_at" = ? WHERE "artists"."id" = ?[0m  [["updated_at", "2018-12-22 14:28:48.517472"], ["id", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (55.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:24
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: db50b10e-15c8-43c8-9c60-de40dd847d31) to Async(default) with arguments: #<GlobalID:0x000055dc9ace09d8 @uri=#<URI::GID gid://spotmusic/ActiveStorage::Blob/5>>
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [db50b10e-15c8-43c8-9c60-de40dd847d31] Performing ActiveStorage::AnalyzeJob (Job ID: db50b10e-15c8-43c8-9c60-de40dd847d31) from Async(default) with arguments: #<GlobalID:0x000055dc9ae55638 @uri=#<URI::GID gid://spotmusic/ActiveStorage::Blob/5>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [db50b10e-15c8-43c8-9c60-de40dd847d31] Performed ActiveStorage::AnalyzeJob (Job ID: db50b10e-15c8-43c8-9c60-de40dd847d31) from Async(default) in 0.85ms
