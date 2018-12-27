@@ -1,2 +1,20 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<section class="hero is-dark is-fullheight">
+  <div class="hero-body has-text-centered">
+    <div class="container">
+      <h1 class="title has-text-weight-light">
+        SEU APP DE
+        <br />
+      </h1>
+      <h2 class="title has-text-weight-light" style="color:orange"> MÚSICA
+      </h2> 
+      <br />
+      <h3 class="subtitle has-text-weight-light white">
+        Álbuns • Lançamentos<br />
+        Mais tocadas • Recomendadas
+      </h3>
+      <br /><br />
+      <%= link_to "CADASTRAR AGORA", new_user_registration_path, class: "button is-medium is-outlined is-warning", :style=> 'color:orange' %>
+    </div>
+  </div>
+</section>
+<h1 class="title has-text-weight-light" style="color:orange">
