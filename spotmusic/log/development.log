@@ -34331,3 +34331,66 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 33ms (Views: 30.8ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-12-29 20:10:25 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+  Rendered shared/_menu.html.erb (4.3ms)
+  Rendered shared/_toolbar.html.erb (0.4ms)
+Completed 200 OK in 1762ms (Views: 1734.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-29 20:11:04 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered shared/_menu.html.erb (4.5ms)
+  Rendered shared/_toolbar.html.erb (0.4ms)
+Completed 200 OK in 1290ms (Views: 1282.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-29 20:18:04 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+  Rendered shared/_menu.html.erb (1.5ms)
+  Rendered shared/_toolbar.html.erb (0.4ms)
+Completed 200 OK in 3385ms (Views: 3383.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-12-29 20:18:10 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/raicg/.rvm/gems/ruby-2.4.4/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/raicg/.rvm/gems/ruby-2.4.4/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (2.7ms)
+  Rendered /home/raicg/.rvm/gems/ruby-2.4.4/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (114.5ms)
+  Rendered shared/_menu.html.erb (1.9ms)
+  Rendered shared/_toolbar.html.erb (0.6ms)
+Completed 200 OK in 193ms (Views: 163.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-12-29 20:18:21 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f4/33DHJNnECjcGeB5rXUHokE+6nrCm46yUV1NPYXP11GP3QpiXOSg3rEkZkOL5AUHtshtLAJummlWG6K8qZWg==", "user"=>{"email"=>"rai@spotmusic.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (26.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "rai@spotmusic.com"], ["LIMIT", 1]]
+  ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 277ms (ActiveRecord: 26.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-29 20:18:21 -0300
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/raicg/.rvm/gems/ruby-2.4.4/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by DashboardController#index as HTML
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (0.3ms)
+  Rendered shared/_menu.html.erb (2.0ms)
+  Rendered shared/_toolbar.html.erb (0.7ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
