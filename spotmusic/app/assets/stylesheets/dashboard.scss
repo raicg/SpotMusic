@@ -4,10 +4,14 @@ body {
 section.dashboard {
     div.albums_heards {
         h1 {
-            margin-top: 75px;
+            margin-top: 73px;
+            margin-bottom: 15px;
         }
+    }
+    div.albums_recommended {
         h2 {
-            margin-bottom: 50px;
+            margin-top: 5px;
+            margin-bottom: 15px;
         }
     }
 }
