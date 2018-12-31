@@ -205,3 +205,14 @@ ivy.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/ivy.mp3"), filename:
 escape = inside.song.create(title: "Escape")
 escape.file.attach(io: File.open("#{tmp_dir}/seed_files/musics/escape.mp3"), filename: "escape.mp3")
  
+#USERS
+
+freddie_mercury = User.create(name: "Freddie Mercury", email: "freddie@mercury.com", password: "123456", password_confirmation: "123456")
+freddie_mercury.favorite.create(favoritable: trinity)
+freddie_mercury.favorite.create(favoritable: paw_paw_tree)
+freddie_mercury.favorite.create(favoritable: everything_zen)
+freddie_mercury.favorite.create(favoritable: gubernator)
+freddie_mercury.recently_heard.create(album: inside)
+freddie_mercury.recently_heard.create(album: trinity)
+freddie_mercury.recently_heard.create(album: gubernator)
+freddie_mercury.recently_heard.create(album: the_great_bear)
