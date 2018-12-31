@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'search/index'
+  get 'search/new'
   devise_for :users
 
   authenticated :user do
