@@ -2,7 +2,7 @@
   <ul>
     <% if albums %>
       <li class="is-active">
-        <a target="#albums">Álbums</a>
+        <a target="#albums">Álbuns</a>
       </li>
     <% end %>
 
@@ -10,6 +10,8 @@
       <li>
         <a target="#artists">Artistas</a>
       </li>
+    <% else %>
+      <span>Artistas</span>
     <% end %>
 
     <% if songs %>
@@ -21,33 +23,45 @@
 </div>
 
 <div class="tabs-content">
-  <% if albums %>
     <div id="albums" class="tab-item active">
       <div class="columns is-mobile is-multiline">
+      <% if albums.any? %>
         <%= render albums %>
+      <% else %>
+        <div class="hero-body has-text-centered">
+          <span>Nenhum resultado encontrado.</span>
+        </div>
+      <% end %>
       </div>
     </div>
-  <% end %>
 
-  <% if artists %>
     <div id="artists" class="tab-item">
       <div class="columns is-mobile is-multiline">
+      <% if artists.any? %>
         <%= render artists %>
+      <% else %>
+        <div class="hero-body has-text-centered">
+          <span>Nenhum resultado encontrado.</span>
+        </div>
+      <% end %>
       </div>
     </div>
-  <% end %>
 
-  <% if songs %>
     <div id="songs" class="tab-item">
       <div class="columns is-multiline">
+      <% if songs.any? %>
         <div class="column is-12">
-          <button id="play-all" class="button is-primary is-warning">
-            <span class="icon"><i class="fas fa-play-circle"></i></span>
-            <span>Tocar Todas</span>
+          <button id="play-all" class="button is-outlined is-warning">
+            <span class="icon" style="color: orange"><i class="fas fa-play-circle"></i></span>
+            <span style="color: orange">Tocar Todas</span>
           </button>
         </div>
         <%= render songs %>
+      <% else %>
+        <div class="hero-body has-text-centered">
+          <span>Nenhum resultado encontrado.</span>
+        </div>
+      <% end %>
       </div>
     </div>
-  <% end %>
 </div>
