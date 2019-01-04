@@ -1,5 +1,18 @@
+@import "bulma/bulma";
 div.song-item {
+
+  border-top: 1px solid $white;
+
     div.song-item2 {
         align-items: center;
     }
+
+    &:first-child {
+        border-top: none;
+    }
+ 
+    &.playing {
+        color: $warning;
+    }
+    
 }
