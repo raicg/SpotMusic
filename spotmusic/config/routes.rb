@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'artists/index'
   get 'categories/index'
   get 'search/index'
   get 'search/new'
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
     root to: "dashboard#index", as: :authenticated_root
     resources :search, only: [:index, :new], as: :searches
     resources :categories, only: :index
+    resources :artists, only: :index
   end
   
   unauthenticated :user do
