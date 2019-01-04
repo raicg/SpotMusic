@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'albums/index'
   get 'artists/index'
   get 'categories/index'
   get 'search/index'
@@ -10,6 +11,7 @@ Rails.application.routes.draw do
     resources :search, only: [:index, :new], as: :searches
     resources :categories, only: :index
     resources :artists, only: :index
+    resources :albums, only: :index
   end
   
   unauthenticated :user do
