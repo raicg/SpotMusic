@@ -1,2 +1,6 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
+<section class="section has-text-white has-text-centered">
+  <h2 class="is-size-3 has-text-weight-bold"><%= @category.name %></h2>
+  <br />
+  
+  <%= render "shared/tabs", albums: @category.album, artists: @category.artist, songs: @category.song %>
+</section>

@@ -7,10 +7,10 @@ class Category < ApplicationRecord
   has_many :album
 
   def artist
-    Artist.joins(:album).where(album: {id: self.album.id}).distinct
+    Artist.joins(:album).where(albums:{ id: self.album.ids }).distinct
   end
 
   def song
-    Song.joins(:album).where(album: {id: self.album.id}).distinct
-  def 
+    Song.joins(:album).where(albums:{ id: self.album.ids }).distinct
+  end 
 end

@@ -14,8 +14,8 @@
 
   <div class="columns is-multiline is-mobile">
     <% Category.all.each do |category| %>
-      <div class="column is-half-mobile is-one-quarter-desktop is-one-third-tablet">
-        <%= link_to "" do %>  
+      <div class="column is-half-mobile is-one-quarter-desktop">
+        <%= link_to categories_path(id: category.id) do %>  
           <%= image_tag url_for(category.image) %>
         <% end %>
       </div>
