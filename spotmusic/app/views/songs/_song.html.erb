@@ -9,6 +9,8 @@
       <h2 class="is-size-5"><%= song.title %></h2>
       <% if current_page?(searches_path)%>
         <p><%= song.album.artist.name %></p>
+      <% elsif current_page?(categories_path)%>
+        <p><%= song.album.artist.name %></p>
       <% elsif current_page?("#EDITAR")%>
         <span class="icon"><i class="fas fa-play"></i></span><%= song.played_count %>
       <% end %>
