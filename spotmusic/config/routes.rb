@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   authenticated :user do
     root to: "dashboard#index", as: :authenticated_root
     resources :search, only: [:index, :new], as: :searches
+    resources :caregories, only: :index
   end
   
   unauthenticated :user do
