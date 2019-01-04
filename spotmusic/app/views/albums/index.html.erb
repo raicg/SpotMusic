@@ -1,2 +1,19 @@
-<h1>Albums#index</h1>
-<p>Find me in app/views/albums/index.html.erb</p>
+<section class="section has-text-white albums_section">
+  <div class="columns has-text-centered">
+    <div class="column is-8-mobile is-offset-2-mobile is-2-desktop is-offset-5-desktop">
+      <%= image_tag url_for(@album.cover) %>
+      <p class="is-size-5 has-text-weight-semibold"><%= @album.title %></p>
+      <p class="is-size-7"><%= @album.date.strftime("%m/%Y") %></p>
+    </div>
+  </div>
+
+  <hr />
+
+  <h2 class="is-size-5 has-text-weight-bold">Músicas</h2>
+
+  <br />
+
+  <div class="columns is-multiline songs">
+    <%= render @album.song %>
+  </div>
+</section>

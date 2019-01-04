@@ -1,11 +1,13 @@
-<div class="column is-half-mobile is-one-quarter-desktop">
-    <%= image_tag url_for(album.cover), size: "290" %>
-    <p class="is-size-6 has-text-weight-semibold"><%= album.title %></p>
-    <% if current_page?(searches_path)%>
-        <p class="is-size-7"><%= album.artist.name %></p>
-    <% elsif current_page?(categories_path)%>
-        <p class="is-size-7"><%= album.artist.name %></p>        
-    <% elsif current_page?(artists_path)%>
-        <p class="is-size-7"><%= album.date.strftime("%m/%Y") %></p>
+<div class="column is-half-mobile is-one-quarter-desktop is-half-tablet">
+    <%= link_to albums_path(id: album.id), class: "has-text-white" do %>
+        <%= image_tag url_for(album.cover), size: "290" %>
+        <p class="is-size-6 has-text-weight-semibold"><%= album.title %></p>
+        <% if current_page?(searches_path)%>
+            <p class="is-size-7"><%= album.artist.name %></p>
+        <% elsif current_page?(categories_path)%>
+            <p class="is-size-7"><%= album.artist.name %></p>        
+        <% elsif current_page?(artists_path)%>
+            <p class="is-size-7"><%= album.date.strftime("%m/%Y") %></p>
+        <% end %>
     <% end %>
 </div>
