@@ -3,6 +3,8 @@
     <div class="column is-8-mobile is-offset-2-mobile is-2-desktop is-offset-5-desktop">
       <%= image_tag url_for(@artist.photo) %>
       <p class="is-size-5 has-text-weight-semibold"><%= @artist.name %></p>
+      <br />
+      <%= favorite_button(@artist) %>
     </div>
   </div>
  

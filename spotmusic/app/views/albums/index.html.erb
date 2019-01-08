@@ -4,6 +4,8 @@
       <%= image_tag url_for(@album.cover) %>
       <p class="is-size-5 has-text-weight-semibold"><%= @album.title %></p>
       <p class="is-size-7"><%= @album.date.strftime("%m/%Y") %></p>
+      <br />
+      <%= favorite_button(@album) %>
     </div>
   </div>
 

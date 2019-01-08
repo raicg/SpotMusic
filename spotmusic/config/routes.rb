@@ -6,12 +6,12 @@ Rails.application.routes.draw do
     resources :search, only: [:index, :new], as: :searches
     resources :categories, only: :index
     resources :artists, only: :index do
-      post "/favorite", to: "favorites#new", on: :member, defaults: {format: :js, favoritable_type: 'Song'}
-      delete "/favorite", to: "favorites#delete", on: :member, defaults: {format: :js, favoritable_type: 'Song'}
+      post "/favorite", to: "favorites#new", on: :member, defaults: {format: :js, favoritable_type: 'Artist'}
+      delete "/favorite", to: "favorites#delete", on: :member, defaults: {format: :js, favoritable_type: 'Artist'}
     end 
     resources :albums, only: :index do
-      post "/favorite", to: "favorites#new", on: :member, defaults: {format: :js, favoritable_type: 'Song'}
-      delete "/favorite", to: "favorites#delete", on: :member, defaults: {format: :js, favoritable_type: 'Song'}
+      post "/favorite", to: "favorites#new", on: :member, defaults: {format: :js, favoritable_type: 'Album'}
+      delete "/favorite", to: "favorites#delete", on: :member, defaults: {format: :js, favoritable_type: 'Album'}
     end
     resources :songs, only: [] do
       post "/favorite", to: "favorites#new", on: :member, defaults: {format: :js, favoritable_type: 'Song'}
