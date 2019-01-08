@@ -1,6 +1,6 @@
 module FavoritesHelper
   def favorite_button(favoritable)
-    if current_user.favorites.where(favoritable: favoritable).exists?
+    if current_user.favorite.where(favoritable: favoritable).exists?
       render_button(favoritable.id, favoritable.class, :delete, :fas)
     else
       render_button(favoritable.id, favoritable.class, :post, :far)

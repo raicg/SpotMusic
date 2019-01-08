@@ -15,5 +15,8 @@
         <span class="icon"><i class="fas fa-play"></i></span><%= song.played_count %>
       <% end %>
     </div>
+    <div class="column is-2-mobile is-2-desktop is-2-tablet is-pulled-right favorite">
+      <%= favorite_button(song) %>
+    </div>
   </div>
 </div>
