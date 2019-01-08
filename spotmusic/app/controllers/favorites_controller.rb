@@ -6,8 +6,11 @@ class FavoritesController < ApplicationController
   end
 
   def new
-    @favoritable = current_user.favorite.new(favoritable_type: params[:favoritable_type], favoritable_id: params[:id])
-    @favoritable.save
+    if current_user.favorite.where(favoritable_type: params[:favoritable_type], favoritable_id: params[:id]).exists?
+    else
+      @favoritable = current_user.favorite.new(favoritable_type: params[:favoritable_type], favoritable_id: params[:id])
+      @favoritable.save
+    end
   end
 
   def delete

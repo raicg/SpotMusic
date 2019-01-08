@@ -1,2 +1,7 @@
-<h1>Favorites#new</h1>
-<p>Find me in app/views/favorites/new.html.erb</p>
+link_filter = "a[data-kind='<%= @favoritable.favoritable_type %>'][data-id='<%= @favoritable.favoritable_id %>']";
+
+$(`${link_filter}`).attr('data-method', 'delete');
+
+$(`${link_filter} i`)
+    .removeClass('far')
+    .addClass('fas');
