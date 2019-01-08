@@ -1,2 +1,5 @@
-<h1>Favorites#index</h1>
-<p>Find me in app/views/favorites/index.html.erb</p>
+<section class="section has-text-white has-text-centered favorite_section">
+  <h1 class="is-size-3 has-text-weight-bold">Favoritos</h1>
+  <br />
+  <%= render "shared/tabs", artists: @favorite_artists, albums: @favorite_albums, songs: @favorite_songs %>
+</section>
