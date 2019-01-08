@@ -43,4 +43,16 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  config.action_mailer.default_url_options = { :host => "127.0.0.1" }
+  
+  ActionMailer::Base.smtp_settings = {
+  :user_name => 'spotmusic',
+  :password => 'spotmusic123',
+  :domain => 'spotmusic.com',
+  :address => 'smtp.sendgrid.net',
+  :port => 587,
+  :authentication => :plain,
+  :enable_starttls_auto => true
+}
 end
