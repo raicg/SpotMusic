@@ -1,20 +1,23 @@
 Rails.application.routes.draw do
-  get 'favorites/index'
-  get 'favorites/new'
-  get 'favorites/delete'
-  get 'albums/index'
-  get 'artists/index'
-  get 'categories/index'
-  get 'search/index'
-  get 'search/new'
   devise_for :users
 
   authenticated :user do
     root to: "dashboard#index", as: :authenticated_root
     resources :search, only: [:index, :new], as: :searches
     resources :categories, only: :index
-    resources :artists, only: :index
-    resources :albums, only: :index
+    resources :artists, only: :index do
+      post "/favorite", to: "favorites#new", on: :member, defaults: {format: :js, favoritable_type: 'Song'}
+      delete "/favorite", to: "favorites#delete", on: :member, defaults: {format: :js, favoritable_type: 'Song'}
+    end 
+    resources :albums, only: :index do
+      post "/favorite", to: "favorites#new", on: :member, defaults: {format: :js, favoritable_type: 'Song'}
+      delete "/favorite", to: "favorites#delete", on: :member, defaults: {format: :js, favoritable_type: 'Song'}
+    end
+    resources :songs, only: [] do
+      post "/favorite", to: "favorites#new", on: :member, defaults: {format: :js, favoritable_type: 'Song'}
+      delete "/favorite", to: "favorites#delete", on: :member, defaults: {format: :js, favoritable_type: 'Song'}
+    end
+    resources :favorites, only: :index
   end
   
   unauthenticated :user do
