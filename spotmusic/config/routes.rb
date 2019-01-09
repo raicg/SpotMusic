@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'recently_heards/new'
   devise_for :users
 
   authenticated :user do
