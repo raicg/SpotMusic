@@ -16,6 +16,12 @@
   <br />
 
   <div class="columns is-multiline songs">
+    <div class="column is-12">
+      <button id="play-all" class="button is-warning is-outlined">
+          <span class="icon" style="color: orange"><i class="fas fa-play-circle"></i></span>
+          <span style="color: orange">Tocar Todas</span>
+      </button>
+    </div>
     <%= render @album.song %>
   </div>
 </section>
