@@ -12,8 +12,9 @@ Rails.application.routes.draw do
     resources :albums, only: :index do
       post "/favorite", to: "favorites#new", on: :member, defaults: {format: :js, favoritable_type: 'Album'}
       delete "/favorite", to: "favorites#delete", on: :member, defaults: {format: :js, favoritable_type: 'Album'}
-      resources :recently_heards, only: :new
     end
+    resources :recently_heards, only: :new
+      post "/recently_heards/new"
     resources :songs, only: [] do
       post "/favorite", to: "favorites#new", on: :member, defaults: {format: :js, favoritable_type: 'Song'}
       delete "/favorite", to: "favorites#delete", on: :member, defaults: {format: :js, favoritable_type: 'Song'}
